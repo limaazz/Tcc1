@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Pass - Jogos de Luta</title>
+    <link rel="stylesheet" href="luta.css">
+    <!-- Ícones do Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+    
+    <!-- Barra de Navegação Profissional -->
+    <header class="navbar">
+        <div class="nav-left">
+            <i class="bi bi-xbox logo-xbox"></i>
+            <span class="brand-name">Game Pass</span>
+        </div>
+        
+        <div class="nav-center">
+            <div class="search-box">
+                <i class="bi bi-search"></i>
+                <input type="text" placeholder="Pesquise seus jogos...">
+            </div>
+        </div>
+
+        <div class="nav-right">
+            <button class="nav-btn" aria-label="Notificações">
+                <i class="bi bi-bell"></i>
+            </button>
+            <button class="nav-btn profile-btn" aria-label="Perfil">
+                <i class="bi bi-person-circle"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Adicionada a classe container para alinhar o conteúdo com as margens do CSS -->
+    <main class="container">
+
+        <!-- Adicionada a classe profissional para o primeiro título -->
+        <h2 class="titulo-secao">Volte a jogar imediatamente</h2>
+
+        <!-- Removida a section extra para que o Street Fighter respeite o fluxo correto do layout -->
+        <div style="display: flex; justify-content: center; margin-bottom: 20px;">
+        <a href="streetfighter.html"><img class="street" src="imagens/Street Fighter 6.avif" alt="Street Fighter 6"> </a>
+        </div>
+
+        <!-- Ajustada a classe para o subtítulo profissional -->
+        <h2 class="subtitulo-secao">Outros Jogos que podem interessar</h2>
+
+        <!-- Container com o grid de duas em duas colunas para o restante dos jogos -->
+        <div class="jogos-luta">
+            <img class="invencible" src="imagens/Invencible.avif" alt="Invincible">
+            <img class="fatal-fury" src="imagens/Fatal Fury.jpe" alt="Fatal Fury">
+            <img class="tekken8" src="imagens/Tekken 8.jpe" alt="Tekken 8">
+            <img class="Avatar" src="imagens/Avatar Legends.avif" alt="Avatar Legends">
+        </div>
+    </main>
+
+</body>
+</html>

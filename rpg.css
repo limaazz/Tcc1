@@ -1,0 +1,198 @@
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  } 
+  
+  body { 
+    background-color: #111214; 
+    color: #f5f5f5; 
+    padding-bottom: 40px; 
+  } 
+  
+  .navbar { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    background-color: #18191b; 
+    padding: 12px 5%; 
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+    border-bottom: 1px solid #282a2d; 
+  } 
+  
+  .nav-left { 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+  } 
+
+  .logo-xbox { 
+    color: #107c10; /* Verde Xbox Oficial */ 
+    font-size: 2rem; 
+  } 
+  
+  .brand-name { 
+    font-weight: 700; 
+    font-size: 1.2rem; 
+    letter-spacing: 0.5px; 
+  } 
+  
+  /* Caixa de Pesquisa */ 
+  .search-box { 
+    display: flex; 
+    align-items: center; 
+    background-color: #202225; 
+    padding: 8px 16px; 
+    border-radius: 20px; 
+    width: 350px; 
+    border: 1px solid transparent; 
+    transition: 0.3s; 
+  } 
+  
+  .search-box:focus-within { 
+    border-color: #107c10; 
+    background-color: #2f3136; 
+  } 
+  
+  .search-box i { 
+    color: #96989d; 
+    margin-right: 10px; 
+  } 
+  
+  .search-box input { 
+    background: none; 
+    border: none; 
+    color: #fff; 
+    outline: none; 
+    width: 100%; 
+    font-size: 0.95rem; 
+  } 
+  
+  /* Botões do Topo */ 
+  .nav-right { 
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
+  } 
+  
+  .nav-btn { 
+    background: none; 
+    border: none; 
+    color: #f5f5f5; 
+    font-size: 1.3rem; 
+    cursor: pointer; 
+    transition: color 0.2s; 
+  } 
+  
+  .nav-btn:hover { 
+    color: #107c10; 
+  } 
+  
+  .profile-btn { 
+    font-size: 1.6rem; 
+  } 
+  
+  /* Layout do Conteúdo Principal */ 
+  .container { 
+    max-width: 1200px; 
+    margin: 30px auto; 
+    padding: 0 20px; 
+  } 
+  
+  /* ESTILIZAÇÃO PROFISSIONAL PARA AS FRASES */
+  .titulo-secao {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;   /* Deixa em letras maiúsculas estilo console */
+    letter-spacing: 1px;         /* Espaçamento elegante entre as letras */
+    color: #ffffff;
+    margin-bottom: 20px;
+    padding-left: 12px;
+    border-left: 4px solid #107c10; /* Detalhe verde na lateral esquerda */
+  }
+  
+  .subtitulo-secao {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ffffff;
+    margin-top: 50px;            /* Espaço para não grudar nas imagens de cima */
+    margin-bottom: 20px;
+    padding-left: 12px;
+    border-left: 4px solid #107c10;
+  }
+  
+  /* CONTAINER DE IMAGENS */
+  .jogos-luta { 
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    justify-items: center;                  
+    gap: 50px;                             
+  } 
+  
+  /* CONFIGURAÇÃO DAS IMAGENS COM BORDAS ADICIONADAS */
+  .thew { 
+    grid-column: span 2; 
+    width: 100%;        
+    max-width: 800px;   
+    border-radius: 18px; 
+    border: 2px solid #107c10; 
+  } 
+  .thew:hover { 
+    transition: 0.4s; 
+    transform: scale(1.05); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 0 0 2px #107c10; 
+  } 
+  
+  .lord { 
+    width: 100%;        
+    max-width: 400px; 
+    border-radius: 18px; 
+    border: 2px solid #107c10; 
+  } 
+  .lord:hover { 
+    transition: 0.4s; 
+    transform: scale(1.05); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 0 0 2px #107c10; 
+  } 
+  
+  .sky { 
+    width: 100%;        
+    max-width: 400px; 
+    border-radius: 18px; 
+    border: 2px solid #107c10; 
+  } 
+  .sky:hover { 
+    transition: 0.4s; 
+    transform: scale(1.05); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 0 0 2px #107c10; 
+  } 
+  
+  .mist { 
+    width: 100%;        
+    max-width: 400px; 
+    border-radius: 18px; 
+    border: 2px solid #107c10; 
+  } 
+  .mist:hover { 
+    transition: 0.4s; 
+    transform: scale(1.05); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 0 0 2px #107c10; 
+  } 
+  
+  .diablo { 
+    width: 100%;        
+    max-width: 400px; 
+    border-radius: 18px; 
+    border: 2px solid #107c10; 
+  } 
+  .diablo { 
+    transition: 0.4s; 
+    transform: scale(1.05); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 0 0 2px #107c10; 
+  }
+  

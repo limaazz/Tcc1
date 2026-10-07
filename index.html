@@ -1,0 +1,96 @@
+<!DOCTYPE html> 
+<html lang="pt-BR"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Xbox Game Pass - Premium Dashboard</title> 
+    <!-- CSS Local --> 
+    <link rel="stylesheet" href="gamepass.css"> 
+    <!-- Ícones do Bootstrap --> 
+    <link rel="stylesheet" href="https://jsdelivr.net"> 
+</head> 
+<body> 
+    <!-- Barra de Navegação de Alta Costura Digital --> 
+    <header class="navbar"> 
+        <div class="nav-left"> 
+            <i class="bi bi-xbox logo-xbox"></i> 
+            <span class="brand-name">Game Pass<span class="premium-tag">ULTIMATE</span></span> 
+        </div> 
+        <div class="nav-center"> 
+            <div class="search-box"> 
+                <i class="bi bi-search"></i> 
+                <input type="text" placeholder="Buscar títulos, gêneros e amigos..."> 
+            </div> 
+        </div> 
+        <div class="nav-right"> 
+            <button class="nav-btn" aria-label="Notificações"> 
+                <i class="bi bi-bell"></i> 
+                <span class="notification-badge"></span>
+            </button> 
+            <button class="nav-btn profile-btn" aria-label="Perfil"> 
+                <img src="https://unsplash.com" alt="Avatar" class="user-avatar">
+            </button> 
+        </div> 
+    </header> 
+
+    <!-- Conteúdo Principal Premium --> 
+    <main class="container"> 
+        <!-- Menu de Gêneros Estilizado --> 
+        <nav class="menus-explorar"> 
+            <h2 class="titulo-secao">Explore Diferentes Gêneros</h2> 
+            <div class="links-generos"> 
+                <a class="link-clique" href="terror.html"><span>Terror</span></a> 
+                <a class="link-clique" href="acao.html"><span>Ação</span></a> 
+                <a class="link-clique" href="aventura.html"><span>Aventura</span></a> 
+                <a class="link-clique" href="rpg.html"><span>RPG's</span></a> 
+                <a class="link-clique" href="luta.html"><span>Luta</span></a> 
+            </div> 
+        </nav> 
+
+        <!-- Seção Principal de Jogos Integrada --> 
+        <section class="game-section"> 
+            <div class="section-header">
+                <h2 class="subtitulo-secao">Continuar Jogando</h2>
+                <span class="ver-tudo">Ver tudo ({5})</span>
+            </div>
+            
+            <div class="games-grid"> 
+                <!-- Bloco de Jogos -->
+                <a href="mortalkombat.html" class="game-card"> 
+                    <img src="imagens/mk1.webp" alt="Mortal Kombat 1"> 
+                    <div class="card-overlay">Mortal Kombat 1</div>
+                </a> 
+                <a href="2k1.html" class="game-card"> 
+                    <img src="imagens/2k1.webp" alt="NBA 2K21"> 
+                    <div class="card-overlay">NBA 2K21</div>
+                </a> 
+                <a href="Call of duty.html" class="game-card featured"> 
+                    <img src="imagens/cod1.jpg" alt="Call of Duty"> 
+                    <div class="card-overlay">Call of Duty</div>
+                </a> 
+                <a href="Palworld.html" class="game-card"> 
+                    <img src="imagens/plw1.webp" alt="Jogo com amigos 1"> 
+                    <div class="card-overlay">Play with Friends I</div>
+                </a> 
+                
+                <a href="baldur.html" class="game-card"> 
+                    <img src="imagens/baldurs gate.webp" alt="Jogo com amigos 2"> 
+                    <div class="card-overlay">Baldur's Gate</div>
+                </a> 
+
+                <!-- Card de Promoção Vertical de Luxo -->
+                <a href="#" class="game-card card-promocao">
+                    <div class="glow-effect"></div>
+                    <img src="imagens/Promoção.jpg" alt="Promoção Game Pass"> 
+                    <div class="promocao-overlay">
+                        <span class="promo-badge">EXCLUSIVO</span>
+                        <h3>Upgrade Seu Jogo</h3>
+                        <p>Descubra os novos benefícios incluídos na sua assinatura.</p>
+                        <span class="promo-btn">Confira</span>
+                    </div>
+                </a>
+            </div> 
+        </section> 
+    </main> 
+</body> 
+</html>

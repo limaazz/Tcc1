@@ -1,0 +1,410 @@
+/* RESET & CORE STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: #0b0c0e; /* Tom mais escuro e profundo cinematográfico */
+    color: #f5f5f5;
+    padding-bottom: 60px;
+    letter-spacing: -0.2px;
+}
+
+/* NAVBAR LUXO (Efeito de Vidro) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(20, 21, 24, 0.75);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 16px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-xbox {
+    color: #107c10;
+    font-size: 2.2rem;
+    filter: drop-shadow(0 0 8px rgba(16, 124, 16, 0.5));
+}
+
+.brand-name {
+    font-weight: 800;
+    font-size: 1.3rem;
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.premium-tag {
+    font-size: 0.65rem;
+    background: linear-gradient(90deg, #107c10, #15b015);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+/* CAIXA DE PESQUISA REFINADA */
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.04);
+    padding: 10px 20px;
+    border-radius: 12px;
+    width: 420px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.search-box:focus-within {
+    border-color: rgba(16, 124, 16, 0.6);
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 20px rgba(16, 124, 16, 0.15);
+}
+
+.search-box i {
+    color: #72767d;
+    margin-right: 12px;
+    font-size: 1rem;
+}
+
+.search-box input {
+    background: none;
+    border: none;
+    color: #fff;
+    outline: none;
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+/* INTERFACES DO TOPO */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    color: #a3a6ac;
+    font-size: 1.4rem;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.2s;
+}
+
+.nav-btn:hover {
+    color: #ffffff;
+}
+
+.notification-badge {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 8px;
+    height: 8px;
+    background-color: #107c10;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #107c10;
+}
+
+.user-avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    object-fit: cover;
+    transition: border-color 0.3s;
+}
+
+.nav-btn:hover .user-avatar {
+    border-color: #107c10;
+}
+
+/* LAYOUT CONTAINER */
+.container {
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 40px;
+}
+
+/* GÊNEROS ESTILIZADOS */
+.menus-explorar {
+    margin-bottom: 45px;
+}
+
+.titulo-secao {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #72767d;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.links-generos {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.link-clique {
+    text-decoration: none;
+    color: #eeeeee;
+    font-size: 0.9rem;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0.03);
+    padding: 10px 24px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.link-clique:hover {
+    background-color: #ffffff;
+    color: #000000;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+}
+
+/* SEÇÃO DE JOGOS */
+.game-section {
+    margin-bottom: 50px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 20px;
+}
+
+.subtitulo-secao {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+}
+
+.ver-tudo {
+    color: #107c10;
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* GRID DE EXIBIÇÃO AVANÇADO */
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) auto;
+    gap: 24px;
+}
+
+/* CARDS DE COMPUTAÇÃO GRÁFICA DE LUXO */
+.game-card {
+    position: relative;
+    text-decoration: none;
+    border-radius: 14px;
+    overflow: hidden;
+    background-color: #131518;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    display: block;
+    aspect-ratio: 16 / 9;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.game-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Overlay sutil de título que aparece no hover */
+.card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 60%);
+    display: flex;
+    align-items: flex-end;
+    padding: 16px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.game-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.game-card:hover img {
+    transform: scale(1.05);
+}
+
+.game-card:hover .card-overlay {
+    opacity: 1;
+}
+
+/* CARD DE PROMOÇÃO EXTRAORDINÁRIO (EM PÉ) */
+.game-card.card-promocao {
+    grid-column: 3;
+    grid-row: 1 / span 3;
+    aspect-ratio: auto;
+    width: 280px;
+    height: 100%;
+    border: 1px solid rgba(16, 124, 16, 0.3);
+    background: #101114;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), inset 0 0 20px rgba(16, 124, 16, 0.05);
+}
+
+/* Brilho Animado Traseiro */
+.glow-effect {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% -20%, rgba(16, 124, 16, 0.3), transparent 70%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.game-card.card-promocao img {
+    height: 100%;
+    opacity: 0.65;
+    transition: transform 0.8s, opacity 0.4s;
+}
+
+/* Interface Avançada por cima do Anúncio */
+.promocao-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: linear-gradient(to top, #0b0c0e 0%, rgba(11, 12, 14, 0.7) 50%, rgba(0,0,0,0.2) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 24px;
+}
+
+.promo-badge {
+    align-self: flex-start;
+    font-size: 0.6rem;
+    font-weight: 900;
+    background-color: #107c10;
+    padding: 3px 8px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    box-shadow: 0 0 10px rgba(16, 124, 16, 0.6);
+}
+
+.promocao-overlay h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+.promocao-overlay p {
+    font-size: 0.8rem;
+    color: #a3a6ac;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.promo-btn {
+    text-align: center;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 12px;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+/* Comportamento Hover do Layout Premium da Promoção */
+.game-card.card-promocao:hover {
+    border-color: #15b015;
+    box-shadow: 0 25px 50px rgba(16, 124, 16, 0.25);
+}
+
+.game-card.card-promocao:hover img {
+    opacity: 0.8;
+}
+
+.game-card.card-promocao:hover .promo-btn {
+    background-color: #107c10;
+    color: #ffffff;
+    box-shadow: 0 0 15px rgba(16, 124, 16, 0.5);
+}
+
+/* RESPONSIVIDADE ULTRA-FLUIDA */
+@media (max-width: 1024px) {
+    .games-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .game-card.card-promocao {
+        grid-column: span 2;
+        grid-row: auto;
+        width: 100%;
+        aspect-ratio: 16 / 5;
+    }
+    .promocao-overlay {
+        background: linear-gradient(to right, #0b0c0e 40%, transparent 100%);
+        justify-content: center;
+        max-width: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 16px;
+        padding: 20px;
+    }
+    
+    .search-box {
+        width: 100%;
+    }
+    
+    .container {
+        padding: 0 20px;
+    }
+
+    .games-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .game-card.card-promocao {
+        grid-column: auto;
+        aspect-ratio: 16 / 9;
+    }
+    
+    .promocao-overlay {
+        background: linear-gradient(to top, #0b0c0e 0%, rgba(11, 12, 14, 0.5) 100%);
+        max-width: 100%;
+        justify-content: flex-end;
+    }
+}

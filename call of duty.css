@@ -1,0 +1,147 @@
+/* Reset de Estilos Globais */ 
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+  } 
+  
+  /* Base da Página */ 
+  body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background-color: #121212; 
+    color: #e0e0e0; 
+    line-height: 1.6; 
+    padding: 40px 20px; 
+  } 
+  
+  /* Container Centralizador */ 
+  .container { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+  } 
+  
+  /* Cabeçalho Principal */ 
+  header { 
+    text-align: center; 
+    margin-bottom: 50px; 
+  } 
+  
+  header h1 { 
+    font-size: 2.8rem; 
+    color: #ffcc00; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    margin-bottom: 10px; 
+  } 
+  
+  header p { 
+    color: #888; 
+    font-size: 1.1rem; 
+  } 
+  
+  /* Seção Principal: Imagem Esquerda + Texto Direita */ 
+  .main-section { 
+    display: flex; 
+    align-items: center; 
+    gap: 40px; 
+    background-color: #1e1e1e; 
+    padding: 30px; 
+    border-radius: 12px; 
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5); 
+    margin-bottom: 50px; 
+    border-left: 5px solid #ffcc00; 
+  } 
+  
+  /* Caixas de Imagem (Boxes) */ 
+  .image-box { 
+    flex: 1; 
+    background-color: #2a2a2a; 
+    padding: 10px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
+    text-align: center; 
+    overflow: hidden; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  } 
+  
+  /* Ajuste e Adaptação das Imagens com Bordas */
+  .image-box img { 
+    width: 100%; 
+    max-height: 350px; /* Limita a altura para não quebrar o layout */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    border: 2px solid #444; /* Borda inicial elegante */
+    border-radius: 6px; 
+    display: block; 
+    transition: transform 0.3s ease, border-color 0.3s ease; /* Transição suave para o zoom e a borda */
+  } 
+  
+  /* Efeito Interativo Profissional ao passar o mouse */ 
+  .image-box:hover img { 
+    transform: scale(1.03); 
+    border-color: #ffcc00; /* A borda acende com a cor de destaque do site */
+  } 
+  
+  /* Bloco de Texto */ 
+  .text-box { 
+    flex: 2; 
+  } 
+  
+  .text-box h2 { 
+    color: #ffffff; 
+    font-size: 1.8rem; 
+    margin-bottom: 15px; 
+  } 
+  
+  .text-box p { 
+    margin-bottom: 12px; 
+    color: #ccc; 
+    font-size: 0.95rem; 
+  } 
+  
+  .text-box strong { 
+    color: #ffcc00; 
+  } 
+  
+  /* Seção Final: Duas Imagens Lado a Lado */ 
+  .footer-gallery { 
+    display: flex; 
+    gap: 30px; 
+  } 
+  
+  .footer-gallery .image-box { 
+    flex: 1; 
+  } 
+  
+  /* Reduz a altura máxima na galeria inferior para manter a proporção */
+  .footer-gallery .image-box img {
+    max-height: 250px;
+  }
+  
+  /* Responsividade Automatizada para Celulares */ 
+  @media (max-width: 768px) { 
+    body { 
+      padding: 20px 10px; 
+    } 
+    
+    .main-section { 
+      flex-direction: column; 
+      padding: 20px; 
+      gap: 20px; 
+    } 
+    
+    .footer-gallery { 
+      flex-direction: column; 
+      gap: 20px; 
+    } 
+    
+    header h1 { 
+      font-size: 2rem; 
+    } 
+    
+    .image-box img {
+      max-height: 300px; /* Altura ideal adaptada para telas menores */
+    }
+  }
+  

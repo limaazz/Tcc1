@@ -1,0 +1,219 @@
+/* ==========================================================================
+   Configurações Globais e Resets
+   ========================================================================== */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0d0d0d; /* Fundo ligeiramente mais escuro para maior contraste */
+    color: #f5f5f5;
+    line-height: 1.6;
+    padding: 40px 20px; /* Maior espaçamento nas bordas da tela */
+    background-image: radial-gradient(circle at top, #1a0f0a 0%, #0d0d0d 70%); /* Detalhe de iluminação de fundo */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Acessibilidade */
+.visual-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* ==========================================================================
+   Cabeçalho (Header)
+   ========================================================================== */
+.header {
+    text-align: center;
+    margin-bottom: 50px;
+    border-bottom: 1px solid rgba(255, 69, 0, 0.2);
+    padding-bottom: 20px;
+    position: relative;
+}
+
+/* Detalhe de linha dourada sob o título */
+.header::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 3px;
+    background: linear-gradient(90deg, #ff4500, #ff8c00);
+    border-radius: 2px;
+}
+
+.header__title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    background: linear-gradient(45deg, #ff4500, #ff8c00, #ffca36);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 4px 12px rgba(255, 69, 0, 0.15);
+}
+
+/* ==========================================================================
+   Seção de Destaque (Hero) - Primeira Imagem Ocupando 65%
+   ========================================================================== */
+.hero {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 60px;
+    background-color: #161616;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.hero:hover {
+    border-color: rgba(255, 140, 0, 0.3);
+    box-shadow: 0 12px 45px rgba(255, 69, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+    .hero {
+        flex-direction: row;
+        align-items: stretch;
+    }
+    
+    .hero__media {
+        flex: 0 0 65%;
+        max-height: 680px;
+        position: relative;
+    }
+    
+    /* Efeito de corte moderno/transição suave entre imagem e texto no desktop */
+    .hero__media::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 60px;
+        background: linear-gradient(90deg, transparent, #161616);
+        pointer-events: none;
+    }
+    
+    .hero__content {
+        flex: 0 0 35%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.hero__media {
+    width: 100%;
+    /* BORDAS NA PRIMEIRA IMAGEM: Moldura escura com canto arredondado combinando com o container */
+    border-right: 3px solid rgba(255, 85, 0, 0.25);
+    overflow: hidden;
+}
+
+.hero__image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    filter: brightness(0.9) contrast(1.1); /* Ajuste de tom cinemático */
+    transition: filter 0.5s ease, transform 0.5s ease;
+}
+
+.hero:hover .hero__image {
+    filter: brightness(1) contrast(1.1);
+}
+
+.hero__content {
+    padding: 50px 40px;
+}
+
+.hero__text {
+    font-size: 1.15rem;
+    margin-bottom: 25px;
+    color: #cdcdcd;
+    text-align: justify;
+    font-weight: 300;
+}
+
+.hero__text:last-child {
+    margin-bottom: 0;
+}
+
+.hero__text strong {
+    color: #ff8c00;
+    font-weight: 600;
+    text-shadow: 0 0 10px rgba(255, 140, 0, 0.2);
+}
+
+/* ==========================================================================
+   Galeria Final (Duas Imagens na Parte de Baixo)
+   ========================================================================== */
+.gallery {
+    margin-bottom: 60px;
+}
+
+.gallery__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px; /* Maior espaçamento entre os blocos */
+}
+
+@media (min-width: 600px) {
+    .gallery__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Bloco container da foto para permitir efeitos refinados */
+.gallery__item {
+    position: relative;
+    overflow: hidden;
+    /* BORDAS NAS IMAGENS INFERIORES: Estética assimétrica premium */
+    border-radius: 24px 4px 24px 4px; 
+    border: 2px solid rgba(255, 255, 255, 0.08); /* Borda inicial nítida */
+    background-color: #161616;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), border-color 0.4s ease, box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.gallery__thumb {
+    width: 100%;
+    height: 380px; /* Ligeiramente mais alta para melhor visualização */
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    filter: grayscale(20%) brightness(0.85); /* Tom sombrio sutil */
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1), filter 0.6s ease;
+    cursor: pointer;
+}
+
+/* Efeitos coordenados ao passar o mouse sobre o card inferior */
+.gallery__item:hover {
+    transform: translateY(-8px);
+    border-color: #ff4500; /* A borda acende em cor de fogo */
+    box-shadow: 0 15px 35px rgba(255, 69, 0, 0.25);
+}
+
+.gallery__item:hover .gallery__thumb {
+    transform: scale(1.05); /* Zoom sutil sem estourar as bordas */
+    filter: grayscale(0%) brightness(1); /* Ganha cor e brilho totais */
+}

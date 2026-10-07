@@ -1,0 +1,167 @@
+/* ==========================================================================
+   1. VARIÁVEIS DO TEMA (DESIGN SYSTEM)
+   ========================================================================== */
+   :root {
+    --bg-dark: #0b0b0e;
+    --bg-surface: #141419;
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0ab;
+    --accent: #ff4500; /* Laranja oficial estilo basquete */
+    --accent-hover: #e03d00;
+    --font-main: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    --border-radius: 12px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --shadow-sm: 0 10px 20px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* Reset Moderno e Funcional */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    font-family: var(--font-main);
+    line-height: 1.6;
+    padding: 2rem 1rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden; /* Previne quebras de layout na horizontal */
+}
+
+/* ==========================================================================
+   2. ESTRUTURA DO LAYOUT (CONTAINER)
+   ========================================================================== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+}
+
+/* ==========================================================================
+   3. COMPONENTES (METODOLOGIA BEM)
+   ========================================================================== */
+
+/* Cabeçalho */
+.header {
+    text-align: center;
+    padding: 1rem 0;
+    border-bottom: 3px solid var(--accent);
+}
+
+.header__title {
+    font-size: clamp(2rem, 5vw, 3.5rem); /* Tamanho fluido automático para mobile */
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    background: linear-gradient(135deg, #ffffff 30%, var(--accent));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--text-primary); /* Fallback caso o gradiente falhe */
+}
+
+/* Seção Principal (Hero) */
+.hero {
+    background-color: var(--bg-surface);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0; /* Removido gap para encaixe perfeito da imagem */
+}
+
+@media (min-width: 768px) {
+    .hero {
+        grid-template-columns: 1fr 1fr;
+        align-items: stretch; /* Garante que imagem e texto tenham a mesma altura */
+    }
+}
+
+.hero__media {
+    width: 100%;
+    height: 100%;
+    min-height: 300px; /* Evita achatamento em telas médias */
+}
+
+.hero__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero__content {
+    padding: clamp(1.5rem, 4vw, 2.5rem); /* Espaçamento interno adaptável */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.hero__text {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    text-align: justify;
+}
+
+.hero__text strong {
+    color: var(--text-primary);
+    border-bottom: 1px dashed var(--accent);
+}
+
+/* Galeria de Fotos */
+.gallery__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 600px) {
+    .gallery__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.gallery__thumb {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    cursor: pointer;
+    will-change: transform; /* Otimiza a performance da animação no navegador */
+}
+
+/* Efeitos Interativos Profissionais */
+.gallery__thumb:hover {
+    transform: translateY(-5px) scale(1.01);
+    filter: brightness(1.1);
+    box-shadow: 0 15px 30px rgba(255, 69, 0, 0.25);
+}
+
+.gallery__thumb:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 4px;
+}
+
+/* Utilitário Oculto para Acessibilidade (SEO / Leitores de Tela) */
+.visual-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}

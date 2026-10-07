@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortal Kombat 1 - Universo Reorganizado</title>
+    <!-- Link para fontes modernas -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="gamepass2.css">
+</head>
+<body>
+
+    <!-- Cabeçalho Principal -->
+    <header class="main-header">
+        <div class="logo">MORTAL KOMBAT 1</div>
+        <nav class="nav-menu">
+            <a href="#sobre">Sobre</a>
+            <a href="#galeria">Galeria</a>
+            <a href="#personagens">Personagens</a>
+        </nav>
+    </header>
+
+    <!-- Seção Hero (Destaque) -->
+    <main class="container">
+        <section id="sobre" class="hero-section">
+            <div class="hero-image">
+                <img src="imagens/MK1.jpg" alt="Capa Oficial Mortal Kombat 1">
+            </div>
+            <div class="hero-content">
+                <h2>A Nova Era Começou</h2>
+                <p class="textomk">
+                    Mortal Kombat 1 é o mais recente jogo de luta da icônica franquia da <a href="https://www.mortalkombat.com/pt-br/faq" target="_blank" rel="noopener">NetherRealm Studios</a>. O jogo atua como um reboot completo do universo, iniciando uma nova linha do tempo criada pelo Deus do Fogo Liu Kang, trazendo versões totalmente reimaginadas de guerreiros clássicos.
+                </p>
+                <a href="https://mortalkombat.com" target="_blank" rel="noopener" class="btn-buy">Compre Agora</a>
+            </div>
+        </section>
+
+        <!-- Seção de Galeria de Imagens -->
+        <section id="galeria" class="gallery-section">
+            <h3>Imagens Oficiais</h3>
+            <div class="imagensmk">
+                <div class="gallery-card">
+                    <img class="mk1" src="imagens/mk1zz.jpg" alt="Gameplay Arena">
+                </div>
+                <div class="gallery-card">
+                    <img class="mk2" src="imagens/wallmk1.jpeg" alt="Wallpaper Liu Kang">
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Funcional Interativa (JavaScript) -->
+        <section id="personagens" class="roster-section">
+            <h3>Escolha seu Lutador</h3>
+            <p class="subtitle">Clique para ver os detalhes do personagem</p>
+            
+            <div class="roster-grid">
+                <div class="char-card" data-desc="Deus do Fogo e criador desta nova linha do tempo. Luta para proteger a paz que construiu.">
+                    <span>Liu Kang</span>
+                </div>
+                <div class="char-card" data-desc="Grande Mestre dos Lin Kuei. Controla o gelo e busca elevar o poder do seu clã no novo mundo.">
+                    <span>Sub-Zero</span>
+                </div>
+                <div class="char-card" data-desc="Guerreiro focado no elemento fogo. Nesta linha do tempo, enfrenta dilemas profundos de lealdade.">
+                    <span>Scorpion</span>
+                </div>
+            </div>
+
+            <!-- Janela de exibição dinâmica do JS -->
+            <div id="char-details" class="details-box hidden">
+                <p id="details-text">Selecione um guerreiro acima.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="main-footer">
+        <p>&copy; 2026 Desenvolvido para Fãs de MK. Conteúdo oficial por NetherRealm Studios.</p>
+    </footer>
+
+    <!-- Arquivo JavaScript integrado -->
+    <script src="script.js" defer></script>
+</body>
+</html>
